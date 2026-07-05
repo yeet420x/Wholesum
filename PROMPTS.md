@@ -41,6 +41,33 @@ its fur. No horns. Cozy, heavenly, wholesome children's-book atmosphere; the
 realistic human face makes it subtly uncanny. Square format, centered.
 ```
 
+## Prompt 3 — "Wholesem" (the -sem wordplay format)
+
+Different joke than the capybara: this is the same format as copycat coins like `Handsem`
+(hand+ansem, riffing on "handsome") or `Ransem` (ram+ansem, riffing on "ransom") — take a
+"-some"/"-som" word, respell it "-sem", then literally depict that object/animal with the
+face grafted on. For **Wholesem** the word is **whole → hole**: a literal hole with his face
+in it. Bonus: it fits the same black-void look as the original Black Bull, so it doubles as
+a straight parody rather than the pastel capybara reskin.
+
+```
+Hyper-realistic studio photograph of a deep round hole punched into a plain
+black surface, shot dead-on like a dramatic portrait, dramatic low-key
+cinematic lighting. Inside the hole, seamlessly built into the darkness, is
+the human face from the reference image — same serene, unbothered, dead-calm
+expression, staring straight at the camera from within the hole, hair fading
+into the black at the edges. No body, no neck, just the face suspended in the
+hole. Moody rim lighting catching the edges of the hole, otherwise pure black
+void behind and around it. Square format, subject centered, styled exactly
+like a dramatic wildlife/portrait photograph — same energy as a black bull
+staring out of the dark.
+```
+
+Alt phrasing if the generator draws a literal empty hole with no face: swap the middle
+sentence for `A perfectly circular hole is cut into the black background, and the human
+face from the reference image fills the hole completely, as if the hole IS his face —
+his expression calm, his skin blending into the rim of the hole.`
+
 ## Tweaks that help
 
 - If the generator keeps drawing horns: add `absolutely no horns, no bull features, smooth round capybara head` to the end.
