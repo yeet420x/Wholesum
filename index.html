@@ -6,6 +6,12 @@
 <meta name="theme-color" content="#0a0a0a">
 <title>$WHOLESUM — the most wholesum coin on solana. probably.</title>
 <meta name="description" content="$WHOLESUM. he saw the black bull and chose kindness. the most wholesum coin on solana. probably.">
+<!-- SWAP: replace domain below with the final production domain -->
+<meta property="og:title" content="$WHOLESUM — the most wholesum coin on solana. probably.">
+<meta property="og:description" content="he saw the black bull and chose kindness.">
+<meta property="og:image" content="https://wholesum-silk.vercel.app/assets/wholesum.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕳️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +20,13 @@
 <style>
   :root{
     --bg:#0a0a0a;
+    /* warm-gray ramp — every text gray on the page lives on one of these steps */
     --ivory:#e8e6e1;
+    --bright:#d6d4cf;
+    --soft:#b5b2ac;
     --body:#9b9893;
     --dim:#7a7874;
-    --faint:#7a7772;
+    --trace:#4a4844;
     --line:rgba(255,255,255,.08);
     --line-soft:rgba(255,255,255,.05);
   }
@@ -40,6 +49,7 @@
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
   ::selection{background:var(--ivory);color:var(--bg)}
+  :is(a,button):focus-visible{outline:1px solid var(--ivory);outline-offset:3px}
 
   .wrap{max-width:860px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
   .narrow{max-width:620px;margin:0 auto}
@@ -48,7 +58,7 @@
   header{text-align:center;padding:9vh 0 0;position:relative;z-index:1}
 
   .portrait{
-    width:min(540px,92vw);aspect-ratio:1;margin:0 auto;position:relative;
+    width:min(540px, 100vw - 48px);aspect-ratio:1;margin:0 auto;position:relative;
   }
   .portrait img,.portrait video{
     width:100%;height:100%;object-fit:cover;display:block;position:relative;
@@ -73,7 +83,7 @@
     background:radial-gradient(circle at 50% 26%, #121212, #020202 72%);
     box-shadow:inset 0 10px 26px rgba(0,0,0,.9), 0 1px 0 rgba(255,255,255,.05), 0 -1px 0 rgba(255,255,255,.03);
   }
-  .portrait .placeholder .cap1{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:#b3b0aa}
+  .portrait .placeholder .cap1{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--soft)}
   .portrait .placeholder .cap2{font-size:.72rem;letter-spacing:.06em;color:var(--dim)}
   .portrait.empty img,.portrait.empty video{display:none}
   .portrait.empty .halo{display:none}
@@ -86,24 +96,24 @@
   }
   .tagline{
     font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;
-    font-size:clamp(1.05rem,3vw,1.3rem);color:#8f8c86;margin-top:14px;
+    font-size:clamp(1.05rem,3vw,1.3rem);color:var(--body);margin-top:14px;
   }
 
   .ca-pill{
     display:inline-flex;align-items:center;margin-top:48px;
-    max-width:min(560px,92vw);border:1px solid var(--line);border-radius:999px;
+    max-width:min(560px,92vw);border:1px solid var(--line);border-radius:2px;
     background:rgba(255,255,255,.02);
   }
   .ca-pill code{
     font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
-    font-size:.78rem;color:#8f8d88;padding:13px 20px;
+    font-size:.78rem;color:var(--body);padding:13px 20px;
     overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1 1 auto;min-width:0;
   }
   .ca-pill button{
     flex:0 0 auto;font-family:'Inter',sans-serif;font-weight:400;
     font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;
-    color:#c9c7c2;background:transparent;border:none;border-left:1px solid var(--line);
-    border-radius:0 999px 999px 0;padding:14px 22px 14px 23px;cursor:pointer;
+    color:var(--bright);background:transparent;border:none;border-left:1px solid var(--line);
+    border-radius:0 2px 2px 0;padding:14px 22px 14px 23px;cursor:pointer;
     transition:color .25s ease, background .25s ease;
   }
   .ca-pill button:hover{color:var(--bg);background:var(--ivory)}
@@ -112,9 +122,9 @@
   .btn{
     font-family:'Inter',sans-serif;font-weight:400;text-decoration:none;cursor:pointer;
     font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;
-    color:#d6d4cf;background:transparent;display:inline-block;
+    color:var(--bright);background:transparent;display:inline-block;
     padding:16px 32px;padding-left:calc(32px + .24em);
-    border:1px solid rgba(255,255,255,.16);border-radius:999px;
+    border:1px solid rgba(255,255,255,.16);border-radius:2px;
     transition:background .3s ease, color .3s ease, border-color .3s ease;
   }
   .btn:hover{background:var(--ivory);color:var(--bg);border-color:var(--ivory)}
@@ -129,12 +139,13 @@
     -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);
             mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);
   }
-  .marquee-track{display:inline-block;animation:scroll 46s linear infinite}
+  .marquee-scroll{display:inline-block;white-space:nowrap;animation:scroll 46s linear infinite}
+  .marquee-track{display:inline-block}
   .marquee span{
     font-size:.68rem;font-weight:400;letter-spacing:.26em;text-transform:uppercase;
-    color:var(--faint);
+    color:var(--dim);
   }
-  .marquee span::after{content:"·";margin:0 2.8em;color:#4a4844}
+  .marquee span::after{content:"·";margin:0 2.8em;color:var(--trace)}
   @keyframes scroll{to{transform:translateX(-50%)}}
 
   /* ---------- sections ---------- */
@@ -145,9 +156,11 @@
     content:"";display:block;width:1px;height:64px;margin:0 auto 56px;
     background:linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.2), rgba(255,255,255,0));
   }
+  #nomics,#how{padding-top:72px}
+  #nomics::before,#how::before{height:36px;margin-bottom:40px}
   .label{
     font-size:.62rem;font-weight:500;letter-spacing:.34em;padding-left:.34em;
-    text-transform:uppercase;color:var(--faint);margin-bottom:18px;
+    text-transform:uppercase;color:var(--dim);margin-bottom:18px;
   }
   h2{
     font-family:'Cormorant Garamond',serif;font-weight:400;
@@ -161,9 +174,10 @@
     font-size:clamp(1.08rem,2.6vw,1.25rem);line-height:1.95;color:var(--body);
   }
   .prose p + p{margin-top:22px}
-  .prose em{font-style:italic;color:#d8d5cf}
+  .prose em{font-style:italic;color:var(--bright)}
 
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:8px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:8px;
+    border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:28px 0}
   .stat{padding:10px 28px;text-align:center;border-left:1px solid var(--line)}
   .stat:first-child{border-left:none}
   .stat .big{
@@ -176,16 +190,16 @@
     display:grid;grid-template-columns:1fr 1fr;counter-reset:step;
     border-top:1px solid var(--line);margin-top:8px;text-align:left;
   }
-  .step{padding:32px 30px 34px;border-bottom:1px solid var(--line);line-height:1.75;font-size:.85rem;color:#8b8984}
+  .step{padding:32px 30px 34px;border-bottom:1px solid var(--line);line-height:1.75;font-size:.85rem;color:var(--body)}
   .step:nth-child(odd){border-right:1px solid var(--line)}
   .step::before{
     counter-increment:step;content:counter(step,decimal-leading-zero);
     display:block;font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:.95rem;color:var(--faint);margin-bottom:14px;
+    font-size:.95rem;color:var(--dim);margin-bottom:14px;
   }
   .step b{
     display:block;margin-bottom:8px;font-weight:500;font-size:.74rem;
-    letter-spacing:.18em;text-transform:uppercase;color:#dad8d3;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--bright);
   }
 
   .socials{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
@@ -196,16 +210,16 @@
   }
   footer .bye{
     font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;
-    font-size:1.25rem;color:#b5b2ac;margin-bottom:22px;
+    font-size:1.25rem;color:var(--soft);margin-bottom:22px;
   }
   footer .fine{
-    max-width:620px;margin:0 auto;font-size:.72rem;line-height:1.9;color:#8a8781;
+    max-width:620px;margin:0 auto;font-size:.72rem;line-height:1.9;color:var(--body);
   }
 
   /* ---------- toast ---------- */
   #toast{
     position:fixed;left:50%;bottom:36px;transform:translateX(-50%) translateY(130px);z-index:60;
-    background:#161615;border:1px solid rgba(255,255,255,.12);color:#d6d4cf;
+    background:#161615;border:1px solid rgba(255,255,255,.12);color:var(--bright);
     padding:12px 26px;border-radius:999px;font-size:.78rem;letter-spacing:.04em;
     box-shadow:0 8px 30px rgba(0,0,0,.6);
     transition:transform .35s cubic-bezier(.34,1.4,.64,1);pointer-events:none;white-space:nowrap;
@@ -221,8 +235,8 @@
   .js .d4{animation-delay:.4s}
   @keyframes rise{to{opacity:1;transform:none}}
   @keyframes appear{to{opacity:1}}
-  .js .fade{opacity:0;transform:translateY(12px);transition:opacity 1.1s ease, transform 1.1s ease}
-  .js .fade.in{opacity:1;transform:none}
+  .js .fade{opacity:0;transition:opacity 1.1s ease}
+  .js .fade.in{opacity:1}
 
   /* ---------- responsive ---------- */
   @media (max-width:680px){
@@ -242,9 +256,9 @@
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto}
     .halo{animation:none;opacity:.7}
-    .marquee-track{animation:none}
+    .marquee-scroll{animation:none;padding-left:12%}
     .js .reveal,.js .portrait.reveal{animation:none;opacity:1;transform:none}
-    .js .fade{opacity:1;transform:none;transition:none}
+    .js .fade{opacity:1;transition:none}
   }
 </style>
 </head>
@@ -281,11 +295,11 @@
   </div>
 </header>
 
-<div class="marquee"><div class="marquee-track" id="track">
+<div class="marquee"><div class="marquee-scroll"><div class="marquee-track" id="track">
   <span>u are loved</span><span>drink water</span><span>wagmi but politely</span>
   <span>he chose kindness</span><span>call ur mom</span><span>buy high, forgive yourself</span>
   <span>stretch a lil</span><span>capybaras never fud</span><span>ur doing amazing sweetie</span>
-</div></div>
+</div></div></div>
 
 <main class="wrap">
   <section id="lore" class="fade">
@@ -328,7 +342,11 @@
     <h2>join the warm bath</h2>
     <div class="socials">
       <!-- SWAP: X / twitter link -->
-      <a class="btn" href="#" onclick="notYet(event)">𝕏 twitter</a>
+      <a class="btn" href="#" onclick="notYet(event)"><span aria-hidden="true">𝕏</span> twitter</a>
+      <!-- SWAP: pump.fun link (same target as the hero buy button) -->
+      <a class="btn" href="#" onclick="notYet(event)">pump.fun</a>
+      <!-- SWAP: chart link (same target as the hero chart button) -->
+      <a class="btn" href="#" onclick="notYet(event)">dexscreener</a>
     </div>
   </section>
 </main>
@@ -342,18 +360,26 @@
   </div>
 </footer>
 
-<div id="toast">copied. ur amazing.</div>
+<div id="toast" role="status" aria-live="polite">copied. ur amazing.</div>
 
 <script>
-  // duplicate marquee content so the -50% scroll loops seamlessly
+  // duplicate marquee content so the -50% scroll loops seamlessly (clone is decorative)
   const track = document.getElementById('track');
-  track.innerHTML += track.innerHTML;
+  const dup = track.cloneNode(true);
+  dup.removeAttribute('id');
+  dup.setAttribute('aria-hidden','true');
+  track.after(dup);
 
   const TOAST_DEFAULT = 'copied. ur amazing.';
 
   function copyCA(){
     const text = document.getElementById('ca').textContent.replace(/^CA:\s*/,'');
-    navigator.clipboard.writeText(text).then(showToast, showToast);
+    navigator.clipboard.writeText(text).then(showToast, () => {
+      const t = document.getElementById('toast');
+      t.textContent = 'copy failed. u are still amazing.';
+      showToast();
+      setTimeout(()=>t.textContent = TOAST_DEFAULT, 2400);
+    });
   }
   function showToast(){
     const t = document.getElementById('toast');
