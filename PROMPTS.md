@@ -1,4 +1,4 @@
-# $WHOLESUM — image generation kit
+# $WHOLESEM — image generation kit
 
 Goal: the $ANSEM "Black Bull" format, but it's a **capybara** wearing the same face. No horns. Same dead-calm energy.
 
@@ -13,7 +13,7 @@ Goal: the $ANSEM "Black Bull" format, but it's a **capybara** wearing the same f
    - **Midjourney:** upload the oval face, then `--cref <image url> --cw 100 --ar 1:1`
    - **GPT-4o / Gemini / Flux (Krea, fal, etc.):** attach the oval face as a reference image and paste the prompt as-is
 3. Generate square (1:1), at least 1024×1024.
-4. Save the winner as `assets/wholesum.png` — the website picks it up automatically (until then it shows the "wholesum is being born" placeholder).
+4. Save the winner as `assets/wholesum.png` — the website picks it up automatically (until then it shows the "wholesem is being born" placeholder).
 
 ## Prompt 1 — the Black Bull parody (recommended)
 
